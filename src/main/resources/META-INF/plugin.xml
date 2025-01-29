@@ -1,0 +1,36 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.utility.json</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>JSON Utility</name>
+    <version>1.0.0</version>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="nettursuresh@gmail.com">Independent</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+        This IntelliJ based plugin provides an efficient way to validate, format, and generate Java model classes from JSON input.
+        It simplifies the workflow for developers dealing with JSON data and
+        Java projects by ensuring the JSON structure is valid and converting it into clean, well-structured Java classes.
+    ]]></description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <actions>
+        <action id="JsonUtilityAction" class="com.utility.json.JsonUtilityAction" text="Validate Format JSON And Generate Java Model">
+            <add-to-group group-id="CodeMenu" anchor="after" relative-to-action="Generate"/>
+        </action>
+        <action id="JsonUtilityActionLombok" class="com.utility.json.JsonUtilityActionLombok" text="Validate Format JSON And Generate Java Lombok Model">
+            <add-to-group group-id="CodeMenu" anchor="after" relative-to-action="JsonUtilityAction"/>
+        </action>
+    </actions>
+
+</idea-plugin>
