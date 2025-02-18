@@ -1,6 +1,7 @@
 # JSON Utility - Validator, Formatter and Java Model Generator
 
-This plugin provides an efficient way to validate, format, and generate Java model classes from JSON input. It simplifies the workflow for developers dealing with JSON data and Java projects by ensuring the JSON structure is valid and converting it into clean, well-structured Java classes.
+This plugin provides an efficient way to **validate**, **format**, and **auto generate** **Java model** classes from **JSON** input **dynamically**. It simplifies the workflow for developers dealing with JSON data and Java projects by ensuring the JSON structure is valid and converting it into clean, well-structured Java classes.
+
 
 **Authors**: Suresh Nettur, and Akhil Dusi.
 
